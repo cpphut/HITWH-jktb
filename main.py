@@ -332,7 +332,7 @@ if __name__ == "__main__":
     parsed = urlparse(passInfo())
     while parsed.path == "/sfrzwx/auth/login":
       print("登录失败，可能为验证码识别错误，3秒后重试")
-      sleep(3)
+      time.sleep(3)
       parsed = urlparse(passInfo())
     backurl=getlogincode()
     parsed = urlparse(backurl)
