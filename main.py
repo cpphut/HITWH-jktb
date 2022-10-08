@@ -328,6 +328,7 @@ def getlogincode():
 if __name__ == "__main__":
     #passInfo()
     print("欢迎使用全自动健康填报，请在程序开头配置相关信息")
+    mysession.cookies.save()
     mysession.cookies.load()
     parsed = urlparse(passInfo())
     while parsed.path == "/sfrzwx/auth/login":
